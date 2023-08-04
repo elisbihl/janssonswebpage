@@ -1,0 +1,11 @@
+:host {
+  display: block;
+  --color: white;
+  overflow: hidden;
+}
+
+.content {
+  height: 100vh;
+  width: 100vw;
+  --background: unset;
+}

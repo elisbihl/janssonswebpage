@@ -1,0 +1,28 @@
+:host {
+  display: block;
+  top: 0;
+}
+
+.nav {
+  display: flex;
+  background-color: #B97375;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.nav-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  top: 0;
+}
+
+.nav-item {
+  list-style: none;
+}
+
+.nav-item>a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #F1E4E8;
+}

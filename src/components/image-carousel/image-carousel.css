@@ -1,0 +1,65 @@
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
+.slider {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 550px;
+  position: relative;
+  overflow: hidden;
+  margin: 1rem 0 1rem 0;
+}
+
+.slide {
+  padding: 0 18%;
+  margin: auto 0;
+  height: 400px;
+  max-width: 500px;
+  transition: all 0.5s;
+}
+
+.controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin: 10px;
+}
+
+button {
+  margin: 5px;
+}
+
+.images {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.current {
+  position: absolute;
+  height: 550px;
+  max-width: 650px;
+}
+
+.prev {
+  margin: auto 0;
+  height: 400px;
+  max-width: 500px;
+}
+
+.slide img {
+  height: 100%;
+  width: 100%;
+  min-width: 400px;
+  object-fit: fill;
+  border-radius: 15px;
+}
+
+.backdrop {
+  backdrop-filter: drop-shadow(0.5);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
