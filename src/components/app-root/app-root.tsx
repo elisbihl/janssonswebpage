@@ -8,12 +8,14 @@ export class AppRoot {
 
   render() {
     return (
-      <div class="content">
-        <nav-bar></nav-bar>
-        <image-carousel></image-carousel>
-        <our-music></our-music>
-        <about-us></about-us>
-        <social-media></social-media>
+      <div class="main">
+          <div class="content">
+            <nav-bar></nav-bar>
+            <about-us></about-us>
+            <image-carousel></image-carousel>
+            <our-music></our-music>
+            <social-media></social-media>
+          </div>
       </div>
     );
   }

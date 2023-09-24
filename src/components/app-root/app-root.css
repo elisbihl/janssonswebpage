@@ -4,8 +4,15 @@
   overflow: hidden;
 }
 
+.main {
+    display: flex;
+    justify-content: center;
+    background-color: black
+}
+
 .content {
   height: 100vh;
   width: 100vw;
-  --background: unset;
+  max-width: 800px;
+  background-color: black
 }
