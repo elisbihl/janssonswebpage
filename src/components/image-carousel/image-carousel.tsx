@@ -1,4 +1,4 @@
-import { Component, getAssetPath, h, Element, Host, State } from '@stencil/core';
+import { Component, getAssetPath, h, Element, Host } from '@stencil/core';
 
 @Component({
   tag: 'image-carousel',
@@ -11,28 +11,41 @@ import { Component, getAssetPath, h, Element, Host, State } from '@stencil/core'
 export class ImageCarousel {
 
   @Element() element: HTMLElement;
-  @State() curSlide = 0;
   private images = ["janssons.jpg", "IMG_0063.JPG", "IMG_0072.JPG", "IMG_0495.jpg", "cover.jpg"]
 
-  componentWillLoad() {
+  private imageMoving: boolean = false;
 
-  }
+  private async buttonTimeOut(increment: number) {
+    if (!this.imageMoving) {
+      this.changeSlide(increment)
+    }
 
-  nextImage() {
-    this.curSlide = (this.curSlide + 1) % this.images.length;
-  }
-
-  prevImage() {
-    this.curSlide =
-      (this.curSlide - 1 + this.images.length) % this.images.length;
+    this.imageMoving = true;
+    if (this.imageMoving) {
+      setTimeout(() => {
+        this.imageMoving = false;
+      }, 300);
+    }
   }
 
   private changeSlide(increment: number) {
-    const newIndex = this.curSlide + increment;
-    this.curSlide = (newIndex + this.images.length) % this.images.length;
-
-    this.element.shadowRoot.querySelectorAll(".slide").forEach((slide: HTMLElement, index: number) => {
-      slide.style.transform = `translateX(-${this.curSlide * Number(slide.style.width)}px)`;
+    this.element.shadowRoot.querySelectorAll(".slide").forEach((slide: HTMLElement) => {
+      let slideIndex: number = 0;
+      slide.classList.forEach((c) => {
+        if (c.includes("slide-")) {
+          slideIndex = Number(c[c.length - 1]);
+        }
+      });
+      let newIndex;
+      if (slideIndex == this.images.length && increment == 1) {
+        newIndex = 1;
+      } else if (slideIndex == 1 && increment == -1) {
+        newIndex = this.images.length;
+      } else {
+        newIndex = (slideIndex + increment);
+      }
+      console.log(newIndex);
+      slide.classList.replace("slide-" + slideIndex, "slide-" + newIndex);
     });
   }
 
@@ -42,10 +55,10 @@ export class ImageCarousel {
         <div class="slider">
           <div class="images">
             {
-              this.images.map((slide, index) => {
+              this.images.map((image, index) => {
                 return (
-                  <div class={this.curSlide == index ? "current slide" : "slide"}>
-                    <img src={getAssetPath(`../../assets/images/${slide}`)} alt="" />
+                  <div>
+                    <img class={"slide slide-" + (index + 1)} src={getAssetPath(`../../assets/images/${image}`)} alt="" />
                   </div>
                 );
               })
@@ -53,8 +66,8 @@ export class ImageCarousel {
             <div class="backdrop"></div>
           </div>
           <div class="controls">
-            <button onClick={() => this.changeSlide(-1)} class="btn btn-prev"><i class="fa-solid fa-arrow-left"></i></button>
-            <button onClick={() => this.changeSlide(1)} class="btn btn-next"><i class="fa-solid fa-arrow-right"></i></button>
+            <button disabled={this.imageMoving} onClick={() => this.buttonTimeOut(1)} class="btn btn-prev"><i class="fa-solid fa-arrow-left"></i></button>
+            <button disabled={this.imageMoving} onClick={() => this.buttonTimeOut(-1)} class="btn btn-next"><i class="fa-solid fa-arrow-right"></i></button>
           </div>
         </div>
       </Host>
