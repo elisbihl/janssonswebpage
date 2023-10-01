@@ -1,3 +1,15 @@
 :host {
   display: block;
 }
+
+.socials-row {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+.socials-row > a > img {
+    object-fit: scale-down;
+    max-width: 50px;
+}
