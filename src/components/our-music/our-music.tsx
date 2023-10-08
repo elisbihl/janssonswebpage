@@ -9,7 +9,7 @@ export class OurMusic {
 
   render() {
     return (
-      <div class="music">
+      <div class="music" id="music">
         <div class="player">
           <iframe
             class="spotify-player"
