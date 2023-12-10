@@ -11,7 +11,7 @@ import { Component, getAssetPath, h, Element, Host } from '@stencil/core';
 export class ImageCarousel {
 
   @Element() element: HTMLElement;
-  private images = ["janssons.jpg", "IMG_0063.JPG", "IMG_0072.JPG", "IMG_0495.jpg", "cover.jpg"]
+  private images = ["bild3.jpg", "bild2.jpeg", "bild1.jpeg", "IMG_0063.JPG", "cover.jpg", "janssons.jpg"]
 
   private imageMoving: boolean = false;
 

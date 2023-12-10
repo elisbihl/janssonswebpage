@@ -1,4 +1,4 @@
-import { Component, h } from '@stencil/core';
+import {getAssetPath, Component, h } from '@stencil/core';
 
 @Component({
   tag: 'nav-bar',
@@ -11,14 +11,9 @@ export class NavBar {
     return (
       <div class="nav">
         <div class="titleContainer">
-          <h1>Janssons Temptation Experience</h1>
+           <img class="banner" src={getAssetPath('../../assets/images/banner.png')} alt=""/>
         </div>
-        <ul class="nav-bar">
-          <li class="nav-item"><a href="#music">Music</a></li>
-          <li class="nav-item"><a href="#about">About</a></li>
-          <li class="nav-item"><a href="mailto:">Contact</a></li>
-          <li class="nav-item"><a href="#socials">Socials</a></li>
-        </ul>
+
       </div>
     );
   }

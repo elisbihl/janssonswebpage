@@ -23,7 +23,7 @@ export class AboutUs {
                 <br/>
                 <br/>
                 They started in 2021 as multi-instrumentalist
-                Kevin Kågemyr wanted a band to play his music. He recruited his brother Joel by bass,
+                Kevin Kågemyr wanted a band to play his music. He recruited his brother Joel on bass,
                 aswell as friends Elis 'Thunder Jr.' Bihl on drums and Gustav 'CG' Höglund on guitar/keyboard.
                 The band released their first self-titled album in early 2022 and started to play local bar gigs,
                 aswell as Festival of the Midnight Sun, where they were met with high praise.

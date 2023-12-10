@@ -42,6 +42,9 @@ export class SocialMedia {
              <img src={getAssetPath('../../assets/images/email.png')} alt=""/>
          </a>
         </div>
+        <br/>
+        Email: janssons2021@gmail.com
+        <br/>
       </div>
     );
   }
