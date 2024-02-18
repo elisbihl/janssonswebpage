@@ -5,6 +5,11 @@
 .about {
     display: flex;
     gap: 10px;
+    @media (max-width: 700px) {
+        flex-direction: column;
+        gap: 0px;
+    }
+
     align-items: center;
 }
 
@@ -12,4 +17,7 @@
     object-fit: scale-down;
     height: auto;
     max-width: 50%;
+    @media (max-width: 700px) {
+        max-width: 75%;
+    }
 }

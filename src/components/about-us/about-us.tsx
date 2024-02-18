@@ -11,10 +11,11 @@ export class AboutUs {
     return (
       <Host>
         <slot>
-          <h2> About </h2>
+
           <div id="about" class="about">
             <img src={getAssetPath('../../assets/images/bio_bild.jpg')} alt="" class="bio-bild" />
             <div>
+                <h2> About </h2>
                 The Jansson's Temptation Experience is a rock band from Linköping, Sweden.
                 Their music resembles the first bite of Jansson's Temptation you eat on Christmas Eve.
                 Drawing inspirations from bands like Tame Impala, Dungen och Pink Floyd,
