@@ -32,7 +32,7 @@ export class SocialMedia {
          <a href="https://soundcloud.com/janssonstemptation">
              <img src={getAssetPath('../../assets/images/soundcloud.png')} alt=""/>
          </a>
-         <a href="https://music.apple.com/se/artist/the-janssons-temptation-experience">
+         <a href="https://music.apple.com/us/artist/the-janssons-temptation-experience/1693580014">
              <img src={getAssetPath('../../assets/images/social.png')} alt=""/>
          </a>
          <a href="https://www.youtube.com/channel/UCUCpBQizFVYJDH8B4CayjDg/featured?sub_confirmation=1">
