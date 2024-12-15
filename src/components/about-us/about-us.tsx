@@ -13,7 +13,7 @@ export class AboutUs {
         <slot>
 
           <div id="about" class="about">
-            <img src={getAssetPath('../../assets/images/bio_bild.jpg')} alt="" class="bio-bild" />
+            <img src={getAssetPath('../../assets/images/20240521_173843.jpg')} alt="" class="bio-bild" />
             <div>
                 <h2> About </h2>
                 The Jansson's Temptation Experience is a rock band from Linköping, Sweden.
@@ -29,7 +29,8 @@ export class AboutUs {
                 The band released their first self-titled album in early 2022 and started to play local bar gigs,
                 aswell as Festival of the Midnight Sun, where they were met with high praise.
                 In 2023 they followed up with their second album 'Lasse Stefan & David', described by DJ Mimmo Caccamo as
-                'A record that catapults your mind into the years of flower power'.
+                'A record that catapults your mind into the years of flower power'. In 2024 they continued releasing singles and notably
+                returned to Festival of the Midnight Sun!
 
             </div>
           </div>

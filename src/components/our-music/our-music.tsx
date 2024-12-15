@@ -13,7 +13,7 @@ export class OurMusic {
         <div class="player">
           <iframe
             class="spotify-player"
-            src="https://open.spotify.com/embed/album/3z0zICSQQj9ZNNO7c7xXTD?utm_source=generator&theme=0"
+            src="https://open.spotify.com/embed/artist/6phazupSvTafjFXdr9wrtn?utm_source=generator&theme=0"
             width="100%"
             height="460"
             frameBorder="0"

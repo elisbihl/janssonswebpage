@@ -1,4 +1,4 @@
-import { Component, h } from '@stencil/core';
+import { Component, h, getAssetPath } from '@stencil/core';
 
 @Component({
   tag: 'app-root',
@@ -9,6 +9,7 @@ export class AppRoot {
   render() {
     return (
       <div class="main">
+          <body class="maja"/>
           <div class="content">
             <nav-bar></nav-bar>
             <about-us></about-us>

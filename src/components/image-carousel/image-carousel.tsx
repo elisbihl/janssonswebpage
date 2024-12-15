@@ -11,7 +11,8 @@ import { Component, getAssetPath, h, Element, Host } from '@stencil/core';
 export class ImageCarousel {
 
   @Element() element: HTMLElement;
-  private images = ["bild2.jpeg", "bild1.jpeg", "20240521_173843.jpg", "20240520_201148.jpg",  "IMG_0063.JPG" ,"bild3.jpg", "cover.jpg", "janssons.jpg"]
+
+  private images = ["pal1 (1).jpg", "pal1 (2).jpg", "pal1 (3).jpg", "pal1 (4).jpg", "nkpg1.JPG", "nkpg.JPG", "bild1.jpeg", "20240520_201148.jpg"]
 
   private imageMoving: boolean = false;
 
@@ -44,7 +45,6 @@ export class ImageCarousel {
       } else {
         newIndex = (slideIndex + increment);
       }
-      console.log(newIndex);
       slide.classList.replace("slide-" + slideIndex, "slide-" + newIndex);
     });
   }
